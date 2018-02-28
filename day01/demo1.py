@@ -1,9 +1,0 @@
-#!/usr/bin/env python
-# -*-coding:utf-8-*-
-__author__ = 'simon'
-__date__ = '2018/2/28 13:00'
-#使用GitHub
-print('Using github!')
-print('Python learning!')
-print('test')
-print('simon')
