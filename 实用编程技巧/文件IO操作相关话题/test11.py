@@ -1,0 +1,23 @@
+#-*-coding:utf-8-*-
+#如何构建xml文档？
+'''
+    解决方案：
+        使用标准库中的xml.etree.ElementTree，构建ElementTree，使用write方法写入文件。
+'''
+from xml.etree.ElementTree import Element,ElementTree,tostring
+e=Element('Data')
+print(e.tag)
+e.set('name','abc')
+print(tostring(e))
+e.text='123'
+print(tostring(e))
+e2=Element('Row')
+e3=Element('Open')
+e3.text='8.80'
+e2.append(e3)
+print(tostring(e2))
+e.text=None
+e.append(e2)
+print(tostring(e))
+et=ElementTree(e)
+et.write('demo2.xml')
